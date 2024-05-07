@@ -1,0 +1,74 @@
+{
+  "name": "dataeasy",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "@tiptap/extension-color": "^2.2.4",
+    "@tiptap/extension-document": "^2.2.4",
+    "@tiptap/extension-hard-break": "^2.2.4",
+    "@tiptap/extension-paragraph": "^2.2.4",
+    "@tiptap/extension-text": "^2.2.4",
+    "@tiptap/extension-text-align": "^2.2.4",
+    "@tiptap/extension-text-style": "^2.2.4",
+    "@tiptap/extension-underline": "^2.2.4",
+    "@tiptap/pm": "^2.2.4",
+    "@tiptap/starter-kit": "^2.2.4",
+    "@tiptap/vue-2": "^2.2.4",
+    "@v-charts2/chart": "^1.0.1",
+    "axios": "^1.6.7",
+    "core-js": "^3.8.3",
+    "dayjs": "^1.11.10",
+    "echarts": "^5.5.0",
+    "echarts-wordcloud": "^2.1.0",
+    "element-ui": "^2.15.14",
+    "html2canvas": "^1.4.1",
+    "json-editor-vue": "^0.12.0",
+    "koa": "^2.15.0",
+    "lodash": "^4.17.21",
+    "sass": "^1.71.1",
+    "vue": "^2.6.14",
+    "vue-drag-resize": "^1.5.4",
+    "vue-draggable-resizable": "^2.3.0",
+    "vue-json-editor": "^1.4.3",
+    "vue-router": "^3.6.5",
+    "vuedraggable": "^2.24.3",
+    "vuex": "^3.6.2",
+    "xlsx": "0.17.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.16",
+    "@babel/eslint-parser": "^7.12.16",
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-eslint": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "eslint": "^7.32.0",
+    "eslint-plugin-vue": "^8.0.3",
+    "pug": "^3.0.2",
+    "pug-plain-loader": "^1.1.0",
+    "vue-template-compiler": "^2.6.14"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "@babel/eslint-parser"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

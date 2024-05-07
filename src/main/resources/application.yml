@@ -1,0 +1,29 @@
+#服务配置
+server:
+  port: 8080
+
+
+spring:
+
+  mvc:
+    static-path-pattern: /file/**
+  #数据库配置
+  datasource:
+    url: jdbc:mysql://localhost:3306/respDatabase
+    username: root
+    password: 447389036
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 15MB
+
+  #关闭渲染时访问数据库
+  jpa:
+    open-in-view: false
+
+  #静态资源访问
+  web:
+    resources:
+      static-locations: file:file

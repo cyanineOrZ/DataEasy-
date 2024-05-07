@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+      <!-- 引入和风天气插件 -->
+
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+
+<!--     关闭自带的弹窗警告-->
+    <script>
+        // 目标节点的 ID
+        const targetNodeId = 'webpack-dev-server-client-overlay';
+
+        // 创建 MutationObserver 实例
+        const observer = new MutationObserver(function(mutationsList, observer) {
+            // 遍历每一个Dom
+            for(let mutation of mutationsList) {
+                // 遍历每一个被添加的节点
+                for(let addedNode of mutation.addedNodes) {
+                    // 如果被添加的节点的 ID 为目标节点的 ID，立即删除它
+                    if (addedNode.id === targetNodeId && addedNode.parentNode) {
+                        // 检查节点是否仍然是其父节点的子节点
+                        if (addedNode.parentNode.contains(addedNode)) {
+                            addedNode.parentNode.removeChild(addedNode);
+                        }
+                    }
+                }
+            }
+        });
+
+        // 配置 MutationObserver 监听 DOM 树的子节点添加
+        const config = { childList: true, subtree: true };
+
+        // 在目标节点上启动 MutationObserver
+        observer.observe(document.body, config);
+
+    </script>
+
+  </body>
+</html>
